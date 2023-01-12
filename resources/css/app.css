@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pizza-desc{
+	font-size: 2em;
+	font-weight: 550;
+}
+.pizza-div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+/* img{
+	width: 70%;
+	height: auto;
+	border-radius: 18px;
+} */
+.w-auto{
+    width: auto;
+}
+.h-40{
+    height: 40%;
+}
+.pizza-cont{
+	cursor: pointer;
+}
+.align-center{
+    align-self: center;
+}
+.rounded-20{
+    border-radius: 5em;
+}
+a{
+    text-decoration: none !important;
+}
+.update-btn:hover{
+    color: orange
+}
+.delete-btn:hover{
+    color: rgb(234, 43, 43);
+}
+.border-none{
+    border: none !important;
+}

@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pizza extends Model
+class restaurant extends Model
 {
     use HasFactory;
 
     /**
-     * Get pizza associated with orders
+     * Get restaurant associated with orders
      */
     public function orders()
     {
@@ -18,11 +18,11 @@ class Pizza extends Model
     }
 
     /**
-     * Get pizza associated with restaurants
+     * Get restaurant associated with pizzas
      */
-    public function restaurants()
+    public function pizzas()
     {
-        return $this->hasManyThrough(Restaurant::class, Order::class);
+        return $this->hasManyThrough(Pizza::class, Order::class);
     }
 
     /**
@@ -32,7 +32,7 @@ class Pizza extends Model
      */
     protected $fillable = [
         'name',
-        'image',
-        'ingredients'
+        'description',
+        'address'
     ];
 }

@@ -12,6 +12,7 @@ export default function Register() {
         email: '',
         password: '',
         password_confirmation: '',
+        is_seller: ''
     });
 
     useEffect(() => {
@@ -100,6 +101,24 @@ export default function Register() {
                     />
 
                     <InputError message={errors.password_confirmation} className="mt-2" />
+                </div>
+
+                <div className="mt-4">
+                    <InputLabel forInput="is_seller" value="Are you a seller or a buyer?" />
+
+                    <select
+                        className="my-1 block rounded pl-2 w-full border-gray-300"
+                        title='Click to select'
+                        value={data.is_seller}
+                        onChange={(e)=>setData({...data, is_seller: e.target.value})}
+                        name='is_seller'
+                    >
+                        <option>Select --</option>
+                        <option value={1}>Seller</option>
+                        <option value={0}>Buyer</option>
+                    </select>
+
+                    <InputError message={errors.is_seller} className="mt-2" />
                 </div>
 
                 <div className="flex items-center justify-end mt-4">
