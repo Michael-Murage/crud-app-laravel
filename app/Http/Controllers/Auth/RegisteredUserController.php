@@ -45,6 +45,8 @@ class RegisteredUserController extends Controller
             'is_seller' => $request->is_seller
         ]);
 
+        $request->session()->put('key', $user->id);
+
         event(new Registered($user));
 
         Auth::login($user);

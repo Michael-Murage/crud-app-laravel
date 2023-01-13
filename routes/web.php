@@ -42,4 +42,20 @@ Route::get('/pizza/{id}/edit', function($key){
     ]);
 })->middleware(['auth', 'verified']);
 
+Route::get('/restaurant', function(){
+    return Inertia::render('Restaurants');
+});
+
+Route::get('/restaurant/{id}', function($key){
+    return Inertia::render('ViewRestaurant', [
+        'id' => intval($key)
+    ]);
+});
+
+Route::get('/restaurant/{id}/edit', function($key){
+    return Inertia::render('EditRestaurant', [
+        'id' => intval($key)
+    ]);
+})->middleware(['auth', 'verified']);
+
 require __DIR__.'/auth.php';

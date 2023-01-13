@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PizzaController;
+use App\Http\Controllers\RestaurantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,8 @@ Route::get('/pizzas', [PizzaController::class, 'index']);
 Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
 Route::patch('/pizzas/{id}', [PizzaController::class, 'update']);
 Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy']);
+Route::post('/pizzas', [PizzaController::class, 'store']);
+
+Route::post('/restaurants', [RestaurantController::class, 'store']);
+Route::get('/restaurants', [RestaurantController::class, 'index']);
+Route::get('/restaurants/{id}', [RestaurantController::class, 'show']);

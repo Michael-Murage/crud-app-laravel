@@ -44,3 +44,10 @@ a{
 .border-none{
     border: none !important;
 }
+.rest-text{
+	cursor: pointer;
+}
+.rest-cont{
+	background-color: #eee;
+	border-radius: 10px;
+}
