@@ -74,7 +74,7 @@ function EditPizza({ id, auth }) {
         <Authenticated
             auth={auth}
         >
-		    <form className='card border-none my-3 container'>
+		    <form className='card border-none mt-5 pt-3 container'>
 		    	<div className="form-outline mb-4 mt-2">
 		    		<label className="form-label" htmlFor='name'>Flavour</label>
     	    	    <input name='name'  type="text" className="form-control" onChange={handleChange} value={data?.name} />

@@ -1,3 +1,4 @@
+import Authenticated from '@/Layouts/AuthenticatedLayout'
 import { Inertia } from '@inertiajs/inertia'
 import React from 'react'
 import { GrEdit } from 'react-icons/gr'
@@ -6,7 +7,7 @@ import useImgFormat from './hooks/format'
 import useGetData from './hooks/getData'
 import Loading from './Loading'
 
-function PizzaView({ id }) {
+function PizzaView({ id, auth }) {
 	// const {id} = useParams()
 	// const navigate = useNavigate()
     const format = useImgFormat()
@@ -14,6 +15,9 @@ function PizzaView({ id }) {
 
 	try {
 		return (
+            <Authenticated
+                auth={auth}
+            >
 			<div className="card mx-4 text-center">
 
 			    <div className="align-center">
@@ -45,6 +49,7 @@ function PizzaView({ id }) {
 			    </div>
 
 			</div>
+            </Authenticated>
 
 		)
 	} catch (error) {

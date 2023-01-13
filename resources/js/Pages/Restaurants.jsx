@@ -10,7 +10,7 @@ function Restaurants(props) {
         <Authenticated
             auth={props.auth}
         >
-		<div className='container rests-cont'>
+		<div className='container rests-cont mt-5 pt-5'>
 			{(Array.isArray(data) ? data : []).map(rest =>{
 				return <div key={rest.id}><Restaurant rest={rest} /></div>
 			})
