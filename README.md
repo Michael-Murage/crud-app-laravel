@@ -63,12 +63,12 @@ A pizza `has_many` orders
 A pizza `has_many` restaurants `through` orders
 
 ## Stack
-React v18.2.0
+React
 
-Vite v4.0.0
+Vite
 
-Php v8.0.2
+Laravel
 
-Laravel v9.47.0
+Tailwind
 
-
+MySQL
